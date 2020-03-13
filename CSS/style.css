@@ -1,0 +1,85 @@
+@import 'utilities.css';
+
+:root {
+    --primary: #3DCFD3;
+    --dark: #161616;
+    --pure: #FFFFFF;
+    --ternary: #898989;
+    --light: #F2F2F2;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smotthing: antialiased;
+}
+
+header {
+    background-color: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 90%, 0 100%);
+}
+
+.container {
+    max-width: 1152px;
+    width: 80%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+header nav .left a {
+    color: var(--pure);
+    text-decoration: none;
+    margin-right: 1vw;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+
+header nav .left a:hover {
+    color: var(--primary);
+}
+
+header nav {
+    padding: 2rem 0;
+}
+
+header nav .branding {
+    margin-right: 4vw;
+}
+
+
+.hero .left img {
+    width: 20vw;
+}
+
+.hero .right {
+    color: var(--pure);
+    margin-top: -2%;
+    margin-bottom: 10%;
+}
+
+.hero .right h6 {
+    color: var(--primary);
+    font-size: 1.2vw;
+    margin-bottom: .2vh;
+}
+
+.hero .right h1 {
+    font-size: 5vw;
+    font-weight: 100;
+    line-height: 4.5rem;
+    margin-bottom: 1.5vh;
+}
+
+.hero .right h1 span {
+    color: var(--primary);
+}
+
+.hero .right p {
+    line-height: 1.9rem;
+    margin-bottom: 2vh;
+}
