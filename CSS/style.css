@@ -86,7 +86,7 @@ header nav .branding {
 }
 
 section {
-    padding-top: 10%;
+    padding-top: 5%;
     padding-bottom: 5%;
 }
 
@@ -160,7 +160,7 @@ section.skills .card-wrapper .card {
     transition: all .3s ease;
 }
 
-section.skills .card-wrapper .card img{
+section.skills .card-wrapper .card img {
     position: absolute;
     top: -20%;
     left: 50%;
@@ -183,13 +183,14 @@ section.skills .card-wrapper .card:hover {
     background-color: var(--dark);
 }
 
-section.skills .card-wrapper .card:hover h2, section.skills .card-wrapper .card:hover p {
+section.skills .card-wrapper .card:hover h2,
+section.skills .card-wrapper .card:hover p {
     color: var(--pure);
 }
 
 section.present {
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/camera.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/camera.png);
     color: var(--pure);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 77% 80%, 0 100%);
     padding-bottom: 12%;
@@ -197,10 +198,108 @@ section.present {
 
 section.present h1 {
     font-size: 2rem;
-    margin-bottom: 0.5%;
+    margin-bottom: 1%;
 }
 
 section.present p {
     margin-bottom: 1%;
     font-family: 'Lato', sans-serif;
+    margin-bottom: 3%;
+}
+
+section.exprience h1 {
+    font-size: 2rem;
+    margin-bottom: 1%;
+}
+
+section.exprience p {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-top: 5%;
+    line-height: 1.6rem;
+    margin-bottom: 5%;
+    color: var(--ternary);
+}
+
+
+section.exprience .slider {
+    height: 320px;
+    position: relative;
+}
+
+section.exprience .slide {
+    height: 320px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid var(--light);
+    border-radius: 5%;
+    padding: 3% 3%;
+    opacity: 0;
+    left: calc(50% - 50px);
+    position: absolute;
+    transition: left 1s;
+}
+
+section.exprience .slide p {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-top: 5%;
+    line-height: 1.6rem;
+    margin-bottom: 5%;
+    color: var(--ternary);
+}
+
+section.exprience .slide p span {
+    color: var(--primary);
+}
+
+section.exprience .slide img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    margin-top: 5%;
+}
+
+section.exprience .animate-right {
+    animation: animateright 3s;
+    transition: all 2s ease;
+    display: block;
+    opacity: 1;
+    left: calc(50% - 125px);
+}
+
+@keyframes animateright {
+    0% {
+        right: -10%;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+section.project {
+    background-color: var(--light);
+}
+
+section.project h1 {
+    font-size: 2rem;
+    margin-bottom: 1%;
+}
+
+section.project h1 span {
+    color: var(--primary);
+}
+
+section.project p {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-top: 5%;
+    line-height: 1.6rem;
+    margin-bottom: 5%;
+    color: var(--ternary);
 }
