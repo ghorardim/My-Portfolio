@@ -480,3 +480,9 @@ section.contact .card-wrapper .card h1 {
     font-size: 1.2rem;
     margin-bottom: 1%;
 }
+
+section.contact .card-wrapper .card h6 {
+    font-size: 0.9rem;
+    color: var(--ternary);
+    font-weight: 100;
+}
