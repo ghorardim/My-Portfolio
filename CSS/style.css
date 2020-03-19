@@ -350,3 +350,133 @@ section.project .card-wrapper .card .overlay a {
     color: var(--secondary);
     text-decoration: none;
 }
+
+/* Education */
+
+section.education {
+    background-color: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 73% 85%, 0 100%);
+    padding-bottom: 4%;
+}
+
+section.education h1 {
+    font-size: 2rem;
+    margin-bottom: 1%;
+}
+
+section.education h1 span {
+    color: var(--primary);
+}
+
+section.education p {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-top: 2%;
+    line-height: 1.6rem;
+    margin-bottom: 2%;
+    color: var(--ternary);
+}
+
+section.education .section-heading {
+    color: var(--pure);
+}
+
+section.education .card-wrapper {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+    padding: 0% 0% 5% 5%;
+}
+
+section.education .card-wrapper .card {
+    background: var(--pure);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.education .card-wrapper .card .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.education .card-wrapper .card .card-content {
+    text-align: center;
+    padding: 2%;
+    border-top: 1px solid var(--ternary);
+    width: 60%;
+}
+
+section.education .card-wrapper .card .card-content h1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+section.education .card-wrapper .card .card-content h1:hover {
+    color: var(--primary);
+}
+
+section.education .card-wrapper .card .card-content a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+section.education .card-wrapper .card .card-content span {
+    color: var(--ternary);
+    font-size: 0.8rem;
+}
+
+section.education .card-wrapper .card .card-content p {
+    font-family: 'Lato', sans-serif;
+    color: var(--ternary);
+}
+
+/* Contact */
+
+section.contact {
+    background: var(--pure);
+}
+
+section.contact h1 {
+    font-size: 2rem;
+    margin-bottom: 1%;
+}
+
+section.contact h1 span {
+    color: var(--primary);
+}
+
+section.contact p {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-top: 2%;
+    line-height: 1.6rem;
+    margin-bottom: 2%;
+    color: var(--ternary);
+}
+
+section.contact .card-wrapper {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+}
+
+section.contact .card-wrapper .card {
+    text-align: center;
+}
+
+section.contact .card-wrapper .card img {
+    margin-bottom: 3%;
+}
+
+section.contact .card-wrapper .card h1 {
+    font-family:  'Poppins', sans-serif;
+    color: var(--secondary);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 1%;
+}
