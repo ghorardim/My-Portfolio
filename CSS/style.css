@@ -579,7 +579,6 @@ section.contact .btn-wrapper {
 
 footer {
     background: var(--dark);
-    /* text-align: center; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -846,4 +845,13 @@ footer div {
         margin-top: 10%;
         padding: 5%;
     }
+
+    section.exprience .slide {
+        left: calc(50% - 125px);
+    }
+
+    section.exprience .animate-right {
+        right: calc(50% - 125px);
+    }
+    
 }
