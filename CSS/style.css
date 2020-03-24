@@ -32,25 +32,48 @@ html {
     margin: 0 auto;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 375px) {
+    .container {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 576px) {
     .container {
         max-width: 540px;
     }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .container {
         max-width: 720px;
     }
 }
 
-@media (min-width: 992) {
+@media (max-width: 992) {
     .container {
         max-width: 960;
     }
 }
 
-@media (min-width: 1200) {
+@media (max-width:1024px) {
+
+    .container {
+        padding: 0px 10px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .container {
+        width: 90%;
+        padding: 0px 10px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1200) {
     .container {
         max-width: 1152px;
     }
@@ -615,6 +638,7 @@ footer div {
     border: none;
     outline: none;
     cursor: pointer;
+    display: none;
 }
 
 .hamberger img {
@@ -627,7 +651,7 @@ footer div {
     left: 0;
     z-index: 2;
     background: var(--light);
-    width: 100%;
+    width: 40%;
     height: 100%;
     padding: 2rem;
     padding-top: 5rem;
@@ -665,16 +689,14 @@ footer div {
 
 /* media quary  */
 
-@media (max-width:1125px) {
-
-    .container {
-        width: 100%;
-        padding: 0px 10px;
-        margin: 0 auto;
-    }
+@media (max-width:1024px) {
 
     header #main-nav {
         display: none;
+    }
+
+    .hamberger {
+        display: block;
     }
 
     .hero .left img {
@@ -692,7 +714,7 @@ footer div {
 
     .hero .right h6 {
         color: var(--primary);
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin-bottom: .5vh;
     }
 
@@ -745,6 +767,42 @@ footer div {
     section.education {
         padding-bottom: 25%;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
+    }
+
+    section.about .right h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    section.about .right h3 {
+        font-size: 1.4rem;
+        margin-bottom: .5vh;
+    }
+
+    section.about .right p {
+        line-height: 1.4rem;
+        margin-bottom: 2vh;
+        font-size: 1.4rem;
+    }
+
+    section.skills .card-wrapper .card h2 {
+        font-size: 1.4rem;
+    }
+
+    section.skills .card-wrapper .card p {
+        font-size: 1.3rem;
+    }
+
+    section.exprience p {
+        font-size: 1.3rem;
+    }
+    
+    section.project p {
+        font-size: 1.3rem;
+    }
+
+    section.education p {
+        font-size: 1.3rem;
     }
 }
 
@@ -831,6 +889,7 @@ footer div {
         margin-bottom: 10%;
         grid-row-gap: 10%;
     }
+
     section.contact .input-wrap {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 10%;
@@ -846,12 +905,20 @@ footer div {
         padding: 5%;
     }
 
+}
+
+@media (max-width:420px) {
+    .hero {
+        padding-bottom: 24%;
+    }
+}
+
+@media (max-width:375px) {
     section.exprience .slide {
         left: calc(50% - 125px);
     }
 
     section.exprience .animate-right {
-        right: calc(50% - 125px);
+        left: calc(50% - 125px);
     }
-    
 }
