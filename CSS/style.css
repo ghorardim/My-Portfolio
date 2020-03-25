@@ -651,7 +651,7 @@ footer div {
     left: 0;
     z-index: 2;
     background: var(--light);
-    width: 40%;
+    width: 45%;
     height: 100%;
     padding: 2rem;
     padding-top: 5rem;
@@ -697,6 +697,14 @@ footer div {
 
     .hamberger {
         display: block;
+    }
+
+    .hamberger-hide {
+        display: none;
+    }
+
+    .disable-scrolling{
+        overflow: hidden;
     }
 
     .hero .left img {
@@ -910,6 +918,14 @@ footer div {
 @media (max-width:420px) {
     .hero {
         padding-bottom: 24%;
+    }
+
+    .mobile-nav ul li {
+        margin-bottom: 1rem;
+    }
+
+    .mobile-nav ul li a {
+        font-size: .8rem;
     }
 }
 

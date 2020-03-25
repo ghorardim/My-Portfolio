@@ -1,3 +1,5 @@
+/* Code for slide show */
+
 var myIndex = 0;
 var isSliderHovered = false
 setInterval(function () {
@@ -31,14 +33,36 @@ function animateSlide() {
     }
 }
 
+/* Slide show code end... */
+
+/* Code for Nav Bar... */
+
 let hamberger = document.querySelector('.hamberger');
 let times = document.querySelector('.times');
 let mobileNav = document.querySelector('.mobile-nav');
+let site_main_wrapper = document.querySelector('site-main-wrapper');
+let Body = document.querySelector('body');
 
-hamberger.addEventListener('click',function(){
+function openMobileNav() {
     mobileNav.classList.add('open');
+    hamberger.classList.add('hamberger-hide');
+    Body.classList.add('disable-scrolling');
+}
+
+function closeMobileNav() {
+    mobileNav.classList.remove('open');
+    hamberger.classList.remove('hamberger-hide');
+    Body.classList.remove('disable-scrolling');
+}
+
+hamberger.addEventListener('click', function () {
+    openMobileNav();
 });
 
-times.addEventListener('click',function(){
-    mobileNav.classList.remove('open');
+times.addEventListener('click', function () {
+    closeMobileNav();
 });
+
+/* Body.addEventListener('click', function(){
+    closeMobileNav();
+}); */
