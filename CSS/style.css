@@ -645,6 +645,22 @@ footer div {
     width: 30px;
 }
 
+.branding-mobile {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 1;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.branding-mobile img {
+    width: 40px;
+}
+
 .mobile-nav {
     position: fixed;
     top: 0;
@@ -696,6 +712,10 @@ footer div {
     }
 
     .hamberger {
+        display: block;
+    }
+
+    .branding-mobile {
         display: block;
     }
 
