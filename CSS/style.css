@@ -176,13 +176,14 @@ section.about p {
 section.about .social {
     display: flex;
     margin-top: 4vh;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 section.about .social a {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 7%;
 }
 
 .section-heading {
