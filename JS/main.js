@@ -122,11 +122,14 @@ function sendMessage() {
             Subject: 'Mail from portfolio',
             Body: messageBody
         }).then(
-            message => alert(message)
+           
+           (message)=>{
+            alert(message)
+            if(message == 'OK'){
+                clearMessageform();
+            }
+           }
         );
-        setTimeout(function () {
-            clearMessageform();
-        }, 1500);
 
     } else {
         console.log('False');
