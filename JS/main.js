@@ -103,10 +103,18 @@ function messageValidation() {
 
 }
 
+function clearMessageform() {
+    console.log('clear call');
+    document.forms["messageSendForm"]["Name"].value = "";
+    document.forms["messageSendForm"]["Email"].value = "";
+    document.forms["messageSendForm"]["Subject"].value = "";
+    document.forms["messageSendForm"]["Message"].value = "";
+}
+
 function sendMessage() {
     console.log('I m here for send mail ');
     if (messageValidation()) {
-        var messageBody = "Email:-> "+email.value+"\nSubject:-> "+subject.value+"\nMessage:-> \n"+message.value;
+        var messageBody = "<- Email:-> " + email.value + " <-\n Subject:-> " + subject.value + "<-\n Message:-> \n" + message.value;
         Email.send({
             SecureToken: "ad01b406-fe95-4552-bcd5-d941b244478b",
             To: 'jabirtest02@gmail.com',
@@ -116,7 +124,11 @@ function sendMessage() {
         }).then(
             message => alert(message)
         );
-    }else{
+        setTimeout(function () {
+            clearMessageform();
+        }, 1500);
+
+    } else {
         console.log('False');
     }
 
