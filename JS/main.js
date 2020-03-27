@@ -18,9 +18,7 @@ function animateSlide() {
     if (!isSliderHovered) {
         var i;
         var x = document.getElementsByClassName("slide");
-        console.log(x)
         for (i = 0; i < x.length; i++) {
-            console.log(x[i].className)
             if (x[i].className.includes("animate-right")) {
                 x[i].classList.remove("animate-right")
             }
@@ -63,6 +61,63 @@ times.addEventListener('click', function () {
     closeMobileNav();
 });
 
-/* Body.addEventListener('click', function(){
-    closeMobileNav();
-}); */
+
+/* send mail for contact */
+
+var form = document.getElementById("contactFormID");
+
+function handleForm(event) {
+    event.preventDefault();
+}
+form.addEventListener('click', handleForm);
+
+var name = document.forms["messageSendForm"]["Name"];
+var email = document.forms["messageSendForm"]["Email"];
+var subject = document.forms["messageSendForm"]["Subject"];
+var message = document.forms["messageSendForm"]["Message"];
+
+function messageValidation() {
+
+    if (name.value == "") {
+        window.alert("Please enter your name.");
+        name.focus();
+        return false;
+    }
+    if (email.value == "") {
+        window.alert("Please enter your email.");
+        email.focus();
+        return false;
+    }
+    if (subject.value == "") {
+        window.alert("Please enter your subject.");
+        subject.focus();
+        return false;
+    }
+    if (message.value == "") {
+        window.alert("Please enter your message.");
+        message.focus();
+        return false;
+    }
+
+    return true;
+
+}
+
+function sendMessage() {
+    console.log('I m here for send mail ');
+    if (messageValidation()) {
+        var messageBody = "Email:-> "+email.value+"\nSubject:-> "+subject.value+"\nMessage:-> \n"+message.value;
+        Email.send({
+            SecureToken: "ad01b406-fe95-4552-bcd5-d941b244478b",
+            To: 'jabirtest02@gmail.com',
+            From: "testjabir01@gmail.com",
+            Subject: 'Mail from portfolio',
+            Body: messageBody
+        }).then(
+            message => alert(message)
+        );
+    }else{
+        console.log('False');
+    }
+
+}

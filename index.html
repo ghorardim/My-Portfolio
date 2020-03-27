@@ -20,7 +20,7 @@
         </button>
         <div class="mobile-nav">
             <button class="times"><img src="./images/times.svg" alt=""></button>
-            <ul>
+            <ul onclick="closeMobileNav()">
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#TechnicalSkill">Technical Skill</a></li>
@@ -269,17 +269,17 @@
                         <h6>aamjabir@gmail.com</h6>
                     </div>
                 </div>
-                <form action="">
+                <form name="messageSendForm" id="contactFormID" action="">
                     <div class="input-wrap">
-                        <input type="text" placeholder="Your Name *">
-                        <input type="email" placeholder="Your Email *">
+                        <input type="text" placeholder="Your Name *" name="Name">
+                        <input type="email" placeholder="Your Email *" name="Email">
                     </div>
                     <div class="input-wrap-2">
-                        <input type="text" placeholder="Your Subject *">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
+                        <input type="text" placeholder="Your Subject *" name="Subject">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message..." name="Message"></textarea>
                     </div>
                     <div class="btn-wrapper">
-                        <button class="btn btn-primary">Send Message</button>
+                        <button class="btn btn-primary" onclick="sendMessage()" >Send Message</button>
                     </div>
                 </form>
             </div>
@@ -290,12 +290,13 @@
                 <a href="https://github.com/ghorardim"><img src="./images/github2.svg" alt=""></a>
                 <a href="https://www.facebook.com/aam.jabir"><img src="./images/facebook.svg" alt=""></a>
             </div>
-            <div>
+            <div class="footerText">
                 Copyright © 2020 ABDULLAH AL MAHMUD. All rights reserved
             </div>
         </footer>
     </div>
 </body>
 <script src="./JS/main.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </html>
